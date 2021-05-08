@@ -1,0 +1,275 @@
+:root {
+    --Font_Family: Microsoft YaHei UI;
+    --Font_Size: 9pt;
+
+    --Color_Default: #ffffff;
+    --Color_DefaultHover: #f0f0f0;
+    --Color_DefaultPressed: #ececec;
+    --Color_DefaultText: #212121;
+
+    --Color_Primary: #326cf3;
+    --Color_PrimaryHover: #477bf4;
+    --Color_PrimaryPressed: #84a7f8;
+    --Color_PrimaryText: #ffffff;
+
+    --Color_Success: #2db84d;
+    --Color_SuccessHover: #42bf5f;
+    --Color_SuccessPressed: #81d494;
+
+    --Color_Danger: #db3340;
+    --Color_DangerHover: #df4853;
+    --Color_DangerPressed: #e9858c;
+
+    --Color_Warning: #e9af20;
+    --Color_WarningHover: #ebb737;
+    --Color_WarningPressed: #f2cf79;
+
+    --Color_Info: #00bcd4;
+    --Color_InfoHover: #1ac3d8;
+    --Color_InfoPressed: #66d7e5;
+
+    --Color_Border: #cbcbcb;
+    --Color_WindowsIcon: #cbcbcb;
+    --Color_Background: #eeeeee;
+    --Color_Shadow: #AA000000;
+
+    --Color_Transparent: transparent;
+
+    --Size_InputPaddingLR: 8px;
+    --Size_InputPaddingTB: 6px;
+
+    --Size_HeaderHeight: 50px;
+    --Size_ItemHeight: 40px;
+    --Size_ProgressHeight: 26px;
+    --Size_ControlHeight: 18px;
+
+    --Size_ControlPaddingLR: 8px;
+    --Size_ControlPaddingTB: 6px;
+
+    --Size_IconSize: 24px;
+    --Size_CornerRadius: 4px;
+
+    --Size_CalendarWidth: 287px;
+    --Size_CalendarHeight: 300px;
+}
+
+/* #QSS_START  */
+
+* {
+    font-family: var(--Font_Family);
+    font-size: var(--Font_Size);
+
+    background: var(--Color_Default);
+    color: var(--Color_DefaultText);
+}
+
+/* PushButton Style */
+
+QPushButton {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--Color_DefaultPressed);
+    padding-left: var(--Size_InputPaddingLR);
+    padding-right: var(--Size_InputPaddingLR);
+    padding-top: var(--Size_InputPaddingTB);
+    padding-bottom: var(--Size_InputPaddingTB);
+    border-radius: var(--Size_CornerRadius);
+    color: var(--Color_DefaultText);
+    background: var(--Color_Default);
+}
+
+QPushButton::hover {
+    color: var(--Color_DefaultText);
+    background: var(--Color_DefaultHover);
+}
+
+QPushButton::pressed {
+    color: var(--Color_DefaultText);
+    background: var(--Color_DefaultPressed);
+}
+
+
+QPushButton#PrimaryPushButton {
+    border-color: var(--Color_PrimaryPressed);
+    color: var(--Color_PrimaryText);
+    background: var(--Color_Primary);
+}
+
+QPushButton#PrimaryPushButton::hover {
+    background: var(--Color_PrimaryHover);
+}
+
+QPushButton#PrimaryPushButton::pressed {
+    background: var(--Color_PrimaryPressed);
+}
+
+QPushButton#SuccessPushButton {
+    border-color: var(--Color_SuccessPressed);
+    color: var(--Color_PrimaryText);
+    background: var(--Color_Success);
+}
+
+QPushButton#SuccessPushButton::hover {
+    background: var(--Color_SuccessHover);
+}
+
+QPushButton#SuccessPushButton::pressed {
+    background: var(--Color_SuccessPressed);
+}
+
+QPushButton#DangerPushButton {
+    border-color: var(--Color_DangerPressed);
+    color: var(--Color_PrimaryText);
+    background: var(--Color_Danger);
+}
+
+QPushButton#DangerPushButton::hover {
+    background: var(--Color_DangerHover);
+}
+
+QPushButton#DangerPushButton::pressed {
+    background: var(--Color_DangerPressed);
+}
+
+QPushButton#WarningPushButton {
+    border-color: var(--Color_WarningPressed);
+    color: var(--Color_PrimaryText);
+    background: var(--Color_Warning);
+}
+
+QPushButton#WarningPushButton::hover {
+    background: var(--Color_WarningHover);
+}
+
+QPushButton#WarningPushButton::pressed {
+    background: var(--Color_WarningPressed);
+}
+
+QPushButton#InfoPushButton {
+    border-color: var(--Color_InfoPressed);
+    color: var(--Color_PrimaryText);
+    background: var(--Color_Info);
+}
+
+QPushButton#InfoPushButton::hover {
+    background: var(--Color_InfoHover);
+}
+
+QPushButton#InfoPushButton::pressed {
+    background: var(--Color_InfoPressed);
+}
+
+/* Windows Buton */
+QPushButton#CloseWindowPushButton {
+    border-style: none;
+    border-radius: 0px;
+    background: var(--Color_Transparent);
+    image: url($PACKAGE_PATH$/resource/svg/CloseWindow.svg)
+}
+
+QPushButton#CloseWindowPushButton::hover {
+    background: #ff1a1a;
+    image: url($PACKAGE_PATH$/resource/svg/CloseWindowHover.svg)
+}
+
+QPushButton#CloseWindowPushButton::pressed {
+    background: #ff6666;
+    image: url($PACKAGE_PATH$/resource/svg/CloseWindowHover.svg)
+}
+
+QPushButton#MaxWindowPushButton {
+    border-style: none;
+    border-radius: 0px;
+    background: var(--Color_Transparent);
+    image: url($PACKAGE_PATH$/resource/svg/MaxWindow.svg)
+}
+
+QPushButton#MaxWindowPushButton::hover {
+    background: var(--Color_DefaultHover);
+}
+
+QPushButton#MaxWindowPushButton::pressed {
+    background: var(var(--Color_DefaultPressed));
+}
+
+QPushButton#MinWindowPushButton {
+    border-style: none;
+    border-radius: 0px;
+    background: var(--Color_Transparent);
+    image: url($PACKAGE_PATH$/resource/svg/MinWindow.svg)
+}
+
+QPushButton#MinWindowPushButton::hover {
+    background: var(--Color_DefaultHover);
+}
+
+QPushButton#MinWindowPushButton::pressed {
+    background: var(var(--Color_DefaultPressed));
+}
+
+
+/* LineEdit Style */
+
+QLineEdit {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--Color_Border);
+    padding-left: var(--Size_InputPaddingLR);
+    padding-right: var(--Size_InputPaddingLR);
+    padding-top: var(--Size_InputPaddingTB);
+    padding-bottom: var(--Size_InputPaddingTB);
+    border-radius: var(--Size_CornerRadius);
+    min-height: var(--Size_ControlHeight);
+    color: var(--Color_DefaultText);
+    background: var(--Color_Default);
+}
+
+QLineEdit::hover {
+    border-color: var(--Color_Primary);
+}
+
+QLineEdit::focus {
+    border-color: var(--Color_Primary);
+}
+
+/* CheckBox Style */
+
+QCheckBox::indicator {
+    width: 14px;
+    height: 14px;
+    padding: 2px;
+
+    border: 1px solid var(--Color_Border);
+    border-radius: 2px;
+}
+
+QCheckBox::indicator::unchecked:hover {
+    border: 1px solid var(--Color_PrimaryHover);
+}
+
+QCheckBox::indicator::checked {
+    background: var(--Color_Primary);
+    image: url($PACKAGE_PATH$/resource/svg/Check.svg);
+    border: 1px solid var(--Color_Primary);
+}
+
+/* TabWidget */
+
+QTabWidget::pane {
+    border:none;
+    border-top: 1px solid var(--Color_Border);
+}
+QTabBar::tab {
+    border:none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    font-size: var(--Font_Size);
+    font-weight: bold;
+}
+QTabBar::tab:selected {
+    color: var(--Color_Primary);
+    border-color: var(--Color_Primary);
+    border-style: solid;
+    border-bottom-width: 3px;
+}

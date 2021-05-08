@@ -1,0 +1,2 @@
+include aigpyqt/resource/*.qss
+include aigpyqt/resource/svg/*.svg
